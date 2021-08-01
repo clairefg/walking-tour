@@ -1,3 +1,24 @@
+// Number of slides that will drive (more = smoother)
+// If this doesn't match the number of slides named 'drive-slide' in config below you will not complete the full journey
+var driveSlides = 7;
+
+// Number of points on drive route (more = higher quality, but slower to process)
+var driveSmoothness = 200;
+
+// Value used to drive
+var driveTime = driveSlides*driveSmoothness;
+
+// Do you want to follow the point? True = follow
+var followPoint = true;
+
+// ...If so, what zoom, pitch, and bearing should be used to follow?
+var followZoomLevel = 14;
+var followBearing = 29;
+var followPitch = 0;
+
+// to add 'driving' slides just make sure to add 'drive to beginning of slide id'
+// you also need to add a running total to the end of each 'drive-slide', (ex. drive-slide-0, drive-slide-1, drive-slide-2, etc.)
+
 var config = {
     style: 'mapbox://styles/clairefg/ckrkyyiat83ql19ogu0p5b9ss',
     accessToken: 'pk.eyJ1IjoiY2xhaXJlZmciLCJhIjoiY2tucTVhcnpnMDJvajJycGVkcjJudW91dCJ9.OvGP1NwRfMS13DlUDbd0Ug',

@@ -379,12 +379,30 @@ map.on("load", function() {
         response.element.classList.remove('active');
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
-        }
-    });
+    }
+    })
+    .onStepProgress(handleStepProgress);
+
+    createLine();
 });
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);
+
+$(document).ready(function (){
+    $.ajax({
+      // url:"file:///Users/clairegoldberg/Desktop/storytelling-main/walkingpath.geojson",
+      url:"file:///Users/clairegoldberg/Desktop/storytelling-main/walkingpath.geojson",
+      dataType: "json",
+      success: function (data) {
+        console.log('data', data.features[0]);
+        routeData = data;
+      },
+      error: function () {
+        console.log('error loading data');
+      }
+    });
+});
 
 </script>
 
