@@ -5,8 +5,8 @@ var config = {
     markerColor: '#5d1212',
     theme: 'light',
     use3dTerrain: false,
-    title: '<h4>Slavery & Resistance in NYC (1626-1865)<h4>',
-    byline: '<p>Created by Mariame Kaba<p>',
+    title: 'Slavery & Resistance in NYC (1626-1865)',
+    byline: 'Created by Mariame Kaba',
     footer: 'Source: source citations, etc.',
     chapters: [
         {
