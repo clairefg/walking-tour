@@ -1,7 +1,7 @@
 var config = {
     style: 'mapbox://styles/clairefg/ckrkyyiat83ql19ogu0p5b9ss',
     accessToken: 'pk.eyJ1IjoiY2xhaXJlZmciLCJhIjoiY2tucTVhcnpnMDJvajJycGVkcjJudW91dCJ9.OvGP1NwRfMS13DlUDbd0Ug',
-    showMarkers: true,
+    showMarkers: false,
     markerColor: '#3FB1CE',
     theme: 'light',
     use3dTerrain: false,
@@ -11,17 +11,17 @@ var config = {
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'Fort Amsterdam',
+            id: 'Tour Overview',
             alignment: 'left',
             hidden: false,
-            title: 'Fort Amsterdam',
+            title: 'Tour Overview',
             image: './path/to/image/source.png',
-            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+            description: '',
             location: {
-                center: [-74.01447, 40.70466],
-                zoom: 17.94,
+                center: [-73.99582, 40.74205],
+                zoom: 12.24,
                 pitch: 60.00,
-                bearing: 26.33
+                bearing: 32.00
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -41,17 +41,17 @@ var config = {
             ]
         },
         {
-            id: 'other-identifier',
+            id: 'Fort Amsterdam',
             alignment: 'right',
             hidden: false,
-            title: 'Second Title',
+            title: 'Fort Amsterdam',
             image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
+            description: 'Fort Amsterdam was originally built on the southern tip of Manhattan, at the juncture of the Hudson and East rivers. This is the place where Peter Miniut supposedly purchased Manhattan for $24. The Fort served as the main administrative center for Dutch rule of New Netherlands, and then for English rule. It was torn down following the American Revolution in 1790.  The Alexander Hamilton U.S. Custom House was erected on the site in the early 1900s, as a center for the collection of duties from the Port of New York. The building covers three city blocks and contains 450,000 square feet. It was condemned in the 1970s and even scheduled for demolition, but was restored in the 1980s. The building currently houses the National Archives and a bankruptcy court. The National Museum of the American Indian was opened in the Custom House in 1994. The Customs House was lavishly decorated when it was constructed in the early 20th century. Architect Gilbert Cass designed the building and worked with sculptors to create and install appropriate statuary. Since the structure was dedicated to trade, Cass wanted the decorations to also focus on the themes of internationalism and global power.  In short, Cass wanted to create a giant tribute to US money and US imperialism at a time of aggressive United States expansion. The United States had fought a war to seize Cuba and the Philippines from Spain in 1898. It had fought another brutal war to put down a rebellion in the Philippines immediately thereafter which lasted until 1913. During this period the US also invaded Panama, Honduras, Nicaragua, Mexico, Haiti, and the Dominican Republic to force these countries to give preferential treatment to US trade and US companies. The imagery used on the building was not a celebration of equality and diversity, but of America’s ability to impose its will on a global scale.',
             location: {
-                center: [-77.020636, 38.886900],
-                zoom: 8.5,
-                pitch: 60,
-                bearing: -43.2
+                center: [-74.01447, 40.70466],
+                zoom: 17.94,
+                pitch: 60.00,
+                bearing: 26.33
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
