@@ -6,7 +6,6 @@ var config = {
     theme: 'light',
     use3dTerrain: false,
     title: 'Slavery & Resistance in NYC (1626-1865)',
-    subtitle: 'A Walking Tour',
     byline: 'Created by Mariame Kaba',
     footer: 'Source: source citations, etc.',
     chapters: [
