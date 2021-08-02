@@ -1,24 +1,3 @@
-// Number of slides that will drive (more = smoother)
-// If this doesn't match the number of slides named 'drive-slide' in config below you will not complete the full journey
-var driveSlides = 7;
-
-// Number of points on drive route (more = higher quality, but slower to process)
-var driveSmoothness = 200;
-
-// Value used to drive
-var driveTime = driveSlides*driveSmoothness;
-
-// Do you want to follow the point? True = follow
-var followPoint = true;
-
-// ...If so, what zoom, pitch, and bearing should be used to follow?
-var followZoomLevel = 14;
-var followBearing = 29;
-var followPitch = 0;
-
-// to add 'driving' slides just make sure to add 'drive to beginning of slide id'
-// you also need to add a running total to the end of each 'drive-slide', (ex. drive-slide-0, drive-slide-1, drive-slide-2, etc.)
-
 var config = {
     style: 'mapbox://styles/clairefg/ckrkyyiat83ql19ogu0p5b9ss',
     accessToken: 'pk.eyJ1IjoiY2xhaXJlZmciLCJhIjoiY2tucTVhcnpnMDJvajJycGVkcjJudW91dCJ9.OvGP1NwRfMS13DlUDbd0Ug',
@@ -31,9 +10,9 @@ var config = {
     footer: 'Source: source citations, etc.',
     chapters: [
         {
-            id: 'slide-0',
+            id: 'Tour Overview',
             alignment: 'left',
-            hidden: false,
+            hidden: true,
             title: 'Tour Overview',
             image: './path/to/image/source.png',
             description: '',
@@ -61,12 +40,12 @@ var config = {
             ]
         },
         {
-            id: 'drive-slide-0',
+            id: 'Fort Amsterdam',
             alignment: 'right',
             hidden: false,
             title: 'Fort Amsterdam',
             image: './path/to/image/source.png',
-            description: 'Fort Amsterdam was originally built on the southern tip of Manhattan, at the juncture of the Hudson and East rivers. This is the place where Peter Miniut supposedly purchased Manhattan for $24. The Fort served as the main administrative center for Dutch rule of New Netherlands, and then for English rule. It was torn down following the American Revolution in 1790. <br> <br> The Alexander Hamilton U.S. Custom House was erected on the site in the early 1900s, as a center for the collection of duties from the Port of New York. The building covers three city blocks and contains 450,000 square feet. It was condemned in the 1970s and even scheduled for demolition, but was restored in the 1980s. The building currently houses the National Archives and a bankruptcy court. The National Museum of the American Indian was opened in the Custom House in 1994. The Customs House was lavishly decorated when it was constructed in the early 20th century. Architect Gilbert Cass designed the building and worked with sculptors to create and install appropriate statuary. Since the structure was dedicated to trade, Cass wanted the decorations to also focus on the themes of internationalism and global power.  In short, Cass wanted to create a giant tribute to US money and US imperialism at a time of aggressive United States expansion. The United States had fought a war to seize Cuba and the Philippines from Spain in 1898. It had fought another brutal war to put down a rebellion in the Philippines immediately thereafter which lasted until 1913. During this period the US also invaded Panama, Honduras, Nicaragua, Mexico, Haiti, and the Dominican Republic to force these countries to give preferential treatment to US trade and US companies. The imagery used on the building was not a celebration of equality and diversity, but of America’s ability to impose its will on a global scale.',
+            description: 'Fort Amsterdam was originally built on the southern tip of Manhattan, at the juncture of the Hudson and East rivers. This is the place where Peter Miniut supposedly purchased Manhattan for $24. The Fort served as the main administrative center for Dutch rule of New Netherlands, and then for English rule. It was torn down following the American Revolution in 1790. <br> <br> The Alexander Hamilton U.S. Custom House was erected on the site in the early 1900s, as a center for the collection of duties from the Port of New York. The building covers three city blocks and contains 450,000 square feet. It was condemned in the 1970s and even scheduled for demolition, but was restored in the 1980s. The building currently houses the National Archives and a bankruptcy court. The National Museum of the American Indian was opened in the Custom House in 1994. <br> <br> The Customs House was lavishly decorated when it was constructed in the early 20th century. Architect Gilbert Cass designed the building and worked with sculptors to create and install appropriate statuary. Since the structure was dedicated to trade, Cass wanted the decorations to also focus on the themes of internationalism and global power. <br> <br> In short, Cass wanted to create a giant tribute to US money and US imperialism at a time of aggressive United States expansion. The United States had fought a war to seize Cuba and the Philippines from Spain in 1898. It had fought another brutal war to put down a rebellion in the Philippines immediately thereafter which lasted until 1913. During this period the US also invaded Panama, Honduras, Nicaragua, Mexico, Haiti, and the Dominican Republic to force these countries to give preferential treatment to US trade and US companies. The imagery used on the building was not a celebration of equality and diversity, but of America’s ability to impose its will on a global scale.',
             
             location: {
                 center: [-74.01366, 40.70452],
@@ -81,79 +60,64 @@ var config = {
             onChapterExit: []
         },
         {
-            id: 'drive-slide-1',
-            title: 'Second Title',
+            id: '2',
+            alignment: 'right',
+            hidden: false,
+            title: 'Fort Amsterdam',
             image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'drive-slide-2',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'drive-slide-3',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'drive-slide-4',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-
-        // You can add a normal slide in the middle of the drive slides to take a break
-        {
-            id: 'slide-4',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
+            description: '',
+            
             location: {
+                center: [-74.01366, 40.70452],
+                zoom: 19.05,
+                pitch: 60.00,
+                bearing: -163.20
             },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
         {
-            id: 'drive-slide-5',
-            title: 'Second Title',
+            id: '3',
+            alignment: 'right',
+            hidden: false,
+            title: 'Fort Amsterdam',
             image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
+            description: '',
+            
+            location: {
+                center: [-74.01366, 40.70452],
+                zoom: 19.05,
+                pitch: 60.00,
+                bearing: -163.20
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
         {
-            id: 'drive-slide-6',
-            title: 'Second Title',
+            id: '4',
+            alignment: 'right',
+            hidden: false,
+            title: 'Fort Amsterdam',
             image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
+            description: '',
+            
+            location: {
+                center: [-74.01366, 40.70452],
+                zoom: 19.05,
+                pitch: 60.00,
+                bearing: -163.20
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
             onChapterEnter: [],
             onChapterExit: []
         },
-        {
-            id: 'slide-2',
-            title: 'Second Title',
-            image: './path/to/image/source.png',
-            description: 'Copy these sections to add to your story.',
-            location: {},
-            onChapterEnter: [],
-            onChapterExit: []
-        }
     ]
 };
