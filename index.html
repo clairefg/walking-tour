@@ -73,7 +73,7 @@
     text-align: left;
     font-size: 1.2em;
     max-width: 50vw;
-    margin: 10px 20px 50px 0px;
+    margin: 10px 50px 20px 0;
 }
 #features .imageCredit {
   font-size: 0.9em;
@@ -379,30 +379,12 @@ map.on("load", function() {
         response.element.classList.remove('active');
         if (chapter.onChapterExit.length > 0) {
             chapter.onChapterExit.forEach(setLayerOpacity);
-    }
-    })
-    .onStepProgress(handleStepProgress);
-
-    createLine();
+        }
+    });
 });
 
 // setup resize event
 window.addEventListener('resize', scroller.resize);
-
-$(document).ready(function (){
-    $.ajax({
-      // url:"file:///Users/clairegoldberg/Desktop/storytelling-main/walkingpath.geojson",
-      url:"file:///Users/clairegoldberg/Desktop/storytelling-main/walkingpath.geojson",
-      dataType: "json",
-      success: function (data) {
-        console.log('data', data.features[0]);
-        routeData = data;
-      },
-      error: function () {
-        console.log('error loading data');
-      }
-    });
-});
 
 </script>
 
